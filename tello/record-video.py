@@ -1,5 +1,6 @@
 import time, cv2
 import keyboard
+import pygame
 from threading import Thread
 from djitellopy import Tello
 
