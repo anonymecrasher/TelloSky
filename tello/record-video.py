@@ -10,6 +10,8 @@ tello.connect()
 keepRecording = True
 tello.streamon()
 frame_read = tello.get_frame_read()
+cv2.imshow(frame_read)
+cv2.WaitKey(1)
 
 def videoRecorder():
     height, width, _ = frame_read.frame.shape
