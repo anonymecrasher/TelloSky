@@ -43,19 +43,20 @@ while run:
     elif keyboard.is_pressed('q'):#q
         tello.move_left(20)
         print('q')
-    elif keyboard.is_pressed('e'):#a
+    elif keyboard.is_pressed('e'):#e
         tello.rotate_clockwise(10)
         print('e')
-    elif keyboard.is_pressed('a'):#e
+    elif keyboard.is_pressed('a'):#a
         tello.rotate_counter_clockwise(10)
         print('a')
-    elif keyboard.is_pressed('r'):#e
+    elif keyboard.is_pressed('r'):#r
         tello.move_up(20)
         print('r')
-    elif keyboard.is_pressed('f'):#e
+        tello.get_height()
+    elif keyboard.is_pressed('f'):#f
         tello.move_down(20)
         print('f')
-    elif keyboard.is_pressed('x'):
+    elif keyboard.is_pressed('x'):#x
         tello.land()
         print('x')
         #Niveau batterie aterissage
