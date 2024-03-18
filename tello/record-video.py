@@ -10,7 +10,7 @@ tello.connect()
 
 keepRecording = True
 tello.streamon()
-frame_read = tello.get_frame_read().frame
+frame_read = tello.get_frame_read()
 
 def videoRecorder():
     height, width, _ = frame_read.frame.shape
