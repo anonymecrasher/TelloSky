@@ -11,16 +11,17 @@ tello.connect()
 keepRecording = True
 tello.streamon()
 frame_read = tello.get_frame_read().frame
-cv2.imshow(frame_read)
-cv2.WaitKey(1)
 
 def videoRecorder():
     height, width, _ = frame_read.frame.shape
     video = cv2.VideoWriter('video.avi', cv2.VideoWriter_fourcc(*'XVID'), 30, (width, height))
 
     while keepRecording:
-        video.write(frame_read.frame)
+        img = frame_read.frame
+        video.write(img)
         time.sleep(1 / 30)
+        cv2.imshow(img)
+        cv2.WaitKey(1)
 
     video.release()
 
