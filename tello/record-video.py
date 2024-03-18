@@ -19,9 +19,9 @@ def videoRecorder():
     while keepRecording:
         img = frame_read.frame
         video.write(img)
-        time.sleep(1 / 30)
-        cv2.imshow(img)
+        cv2.imshow('video_drone', img)
         cv2.WaitKey(1)
+        time.sleep(1/30)
 
     video.release()
 
